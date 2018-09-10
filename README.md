@@ -8,9 +8,11 @@ Test de stroop + capteur PPG + capteur gsr + caméra
 
 <h2>Librairies</h2>
 <ul>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
+  <li>Spidev</li>
+  <li>RPIO.GPIO</li>
+  <li>Smbus</li>
+  <li>Scipy</li>
+  <li>Numpy</li>
+
   
 </ul>
