@@ -18,6 +18,16 @@ Test de stroop + capteur PPG + capteur gsr + caméra
   <li>Les deux raspberry sont reliés via GPIO</li>
 </ul>
 
+<h2>Fonctionnement</h2>
+<ul>
+  <li>Tester les capteurs et la position du participant dans le champ de la caméra avec les codes test</li>
+  <li>Sur le Raspberry1 avec la caméra : Lancer le code record.py en parsant le numéro du participant</li>
+  <li>record.py check l'état du GPIO 12 toutes les 0.5 seconde. Rien ne se passe tant que GPIO 12 à 0</li>
+  <li>Sur le Raspberry2 avec les capteurs : Lancer le code physiologic_signals.py en parsant le numéro du participant</li>
+  <li>Le GPIO 16 du Raspberry2 est forcé à 1 et met à 1 le GPIO 12 du Raspberry1</li>
+  <li>L'enregistrement vidéo et l'acquisition des données des capteurs démarre, la vidéo du protocole démarre</li>
+</ul>
+
 <h2>Usage</h2>
 <h4>Argument parser:</h4>
 <ul>
