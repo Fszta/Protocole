@@ -4,14 +4,12 @@ __author__ = 'Ferszterowski Antoine, antoinefer@hotmail.com'
 import time
 import sys
 import os
-from threading import Thread
-
 import csv
 import argparse
+from threading import Thread
 import RPi.GPIO as GPIO
-from get_value_sensor import PulseSensor
-from i2c_gsr_from_arduino import GsrSensor
-import matplotlib.pyplot as plt
+from ppg_sensor import PulseSensor
+from gsr_sensor import GsrSensor
 
 class PhysiologicSignal():
 
@@ -67,15 +65,7 @@ class PhysiologicSignal():
                 # Obtient les valeurs du capteur gsr
                 self.value_gsr,self.time_gsr,_ = self.gsr_sensor.get_value()
 
-                # Affichage courbe pulse
-                #plt.plot(self.time_pulse,self.value_pulse)
-                #plt.show()
-
-                # Affichage courbe gsr
-                #plt.plot(self.time_gsr,self.value_gsr)
-                #plt.show()
-
-                # Ecriture des fichiers csv
+                # Ecriture des données des capteurs dans deux fichiers csv
                 self.write_csv()
                 sys.exit(0)
 
@@ -154,8 +144,6 @@ class StroopTest(Thread):
 def Programm():
     physiologic_sig = PhysiologicSignal()
     physiologic_sig.run()
-
-
 
 
 if __name__ == '__main__':
