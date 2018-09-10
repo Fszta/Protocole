@@ -2,8 +2,21 @@
 Test de stroop + capteur PPG + capteur gsr + caméra 
 <p>
   <h2>Objectifs</h2>
-  Protocole visant à induire un stress chez les participants dans le but d'obtenir des mesures physiologiques de personnes en état                de stress et en état de relaxation. Le but final étant de créer un modèle de classification du stress à partir de ces données, modèle classifiera les données selon deux groupes : stressé / relaxé 
+  Protocole visant à induire un stress chez les participants dans le but d'obtenir des mesures physiologiques de personnes en état                de stress et en état de relaxation. Le but final étant de créer un modèle de classification du stress à partir de ces données, modèle qui classifiera les données selon deux groupes : stressé / relaxé. Le deuxième intérêt est d'avoir un signal PPG issu d'un capteur synchronisé avec la vidéo du visage pour valider notre système de mesure de l'activité cardiaque par caméra.
+  Le protocole dure 389 secondes, il est composé de trois phases de relaxation (vidéo de paysage) et de trois phases de stress (test de stroop). Pour chaque participant, nous disposerons de :
+  <ul>
+  <li>Signal photopléthysmographique (mesure les variations du volumes sanguins dans les tissus)</li>
+  <li>Signal gsr (mesure les variations de la conductimétrie de la peau ~ la sudation)</li>
+  <li>Vidéo du visage du participant (que l'on utilisera pour extraire le signal PPG et valider notre système de mesures</li>
+  </ul>
 </p>
+
+<h2>Système</h2>
+<ul>
+  <li>Un raspberry avec une Picamera</li>
+  <li>Un raspberry avec les deux capteurs, communication SPI pour le capteur PPG, I2C pour le capteur GSR</li>
+  <li>Les deux raspberry sont reliés via GPIO</li>
+</ul>
 
 <h2>Usage</h2>
 <h4>Argument parser:</h4>
