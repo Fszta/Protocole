@@ -12,8 +12,8 @@ Test de stroop + capteur PPG + capteur gsr + caméra
   <li>RPi.GPIO==0.6.3</li>
   
   <li>smbus-cffi==0.5.1</li>
-  <li>scipy==0.18.1</li>
-  <li>numpy==1.12.1</li>
+  <li>scipy==1.0.1</li>
+  <li>numpy==1.13.3</li>
   <li>picamera==1.13</li>
   <li>matpotlib==2.2.2</li>
   
