@@ -1,12 +1,11 @@
 # coding: utf-8
 __author__ = 'Ferszterowski Antoine, antoinefer@hotmail.com'
 
-
 import time
 import sys
 from threading import Thread
 import smbus
-import matplotlib.pyplot as plt
+
 
 class GsrSensor(Thread):
     """Capteur de conductimétrie de la peau
@@ -55,15 +54,4 @@ class GsrSensor(Thread):
 
     def stop_capture(self):
         self.stopped = True
-
-#def Programm():
-#    sensor = GsrSensor()
-#    sensor.start()
-#    sensor.join()
-
-#if __name__ == '__main__':
-#    Programm()
-
-
-
-
+        
