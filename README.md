@@ -8,11 +8,13 @@ Test de stroop + capteur PPG + capteur gsr + caméra
 
 <h2>Librairies</h2>
 <ul>
-  <li>Spidev</li>
-  <li>RPIO.GPIO</li>
+  <li>spidev==3.3</li>
+  <li>RPi.GPIO==0.6.3</li>
+  
   <li>Smbus</li>
-  <li>Scipy</li>
-  <li>Numpy</li>
+  <li>scipy==0.18.1</li>
+  <li>numpy==1.12.1</li>
+  <li>picamera==1.13</li>
 
   
 </ul>
