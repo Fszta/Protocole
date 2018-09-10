@@ -2,11 +2,12 @@
 __author__ = 'Ferszterowski Antoine, antoinefer@hotmail.com'
 
 import os
-from threading import Thread
 import argparse
-from picamera import PiCamera
 from time import sleep
+from threading import Thread
+from picamera import PiCamera
 import RPi.GPIO as GPIO
+
 
 def Programm():
     recorder = Record()
@@ -17,7 +18,6 @@ class Record():
 
     def __init__(self,duration = 389):
         self.duration_capture = duration
-        #self.record_path = "/home/pi/Desktop/video_dataset/record/record_no_"
         self.record_path = "/media/pi/VERBATIM HD/PC/video_dataset/record/record_no_"
         self.codec_video = ".h264"
         self.camera = PiCamera()
@@ -42,9 +42,6 @@ class Record():
         print("Format d'encodage:",self.codec_video)
         print("Debut de l'enregistrement...")
 
-        #self.camera.start_preview()
-        #self.camera.annotate_text = "Record No"  + self.participant_number
-
         # Enregistrement du flux video
         # Chemin + numéro du participant + extension du fichier
         self.camera.start_recording(self.record_path+self.participant_number+self.codec_video)
@@ -54,7 +51,6 @@ class Record():
 
         # Fin de l'enregistrement
         self.camera.stop_recording()
-        #self.camera.stop_preview()
 
         # Passe le flag à True, arrête la boucle infinie
         self.record_ended = True
@@ -82,21 +78,10 @@ class Record():
             # Si la capture n'a pas commencé et que l'autre pi force le gpio 12 à 1
             if GPIO.input(12) == 1 and self.start_record == False:
                 print("Debut enregistrement")
+                
                 self.start_record = True
-                #thread_stroop = StroopTest()
-                #thread_stroop.start()
-
                 self.capture()
 
-class StroopTest(Thread):
-    """Thread de lancement du test de stroop"""
-
-    def __init__(self):
-        Thread.__init__(self)
-        self.command = "omxplayer /home/pi/Desktop/videoProtocole.mp4"
-        #self.command = "ls"
-    def run(self):
-        os.system(self.command)
 
 if __name__ == '__main__':
     Programm()
