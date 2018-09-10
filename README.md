@@ -6,10 +6,10 @@ Test de stroop + capteur PPG + capteur gsr + caméra
 </p>
 
 <h2>Usage</h2>
-<h3>Argument parser:</h3>
+<h4>Argument parser:</h4>
 <ul>
   <li>1-record.py N°participant</li>
-  <li>2-physioloc_signals.py N°participant</li>
+  <li>2-physiologic_signals.py N°participant</li>
 </ul>
 
 <h2>Librairies</h2>
