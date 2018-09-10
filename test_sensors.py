@@ -2,9 +2,10 @@
 __author__='Ferszterowski Antoine, antoinefer@hotmail.com'
 
 import time
-from  get_value_sensor import PulseSensor
-from i2c_gsr_from_arduino import GsrSensor
+from  ppg_sensor import PulseSensor
+from gsr_sensor import GsrSensor
 import matplotlib.pyplot as plt
+
 
 def Programm():
     test_sensor = TestSensor()
@@ -12,8 +13,8 @@ def Programm():
 
 
 class TestSensor():
-
     """ Code pour tester le bon positionnement du capteur sur le doigt"""
+
     def __init__(self):
         self.pulse_sensor = PulseSensor()
         self.gsr_sensor = GsrSensor()
@@ -21,6 +22,7 @@ class TestSensor():
 
     def run(self):
         """Récupère les valeurs du capteur après 15 secondes"""
+
         print("Debut capture...")
         self.pulse_sensor.start()
         self.gsr_sensor.start()
