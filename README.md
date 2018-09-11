@@ -1,5 +1,6 @@
 # Protocole
 Test de stroop + capteur PPG + capteur gsr + caméra 
+<br/> https://fszta.github.io/Protocole/
 <p>
   <h2>Objectifs</h2>
   Protocole visant à induire un stress chez les participants dans le but d'obtenir des mesures physiologiques de personnes en état                de stress et en état de relaxation. Le but final étant de créer un modèle de classification du stress à partir de ces données, modèle qui classifiera les données selon deux groupes : stressé / relaxé. Le deuxième intérêt est d'avoir un signal PPG issu d'un capteur synchronisé avec la vidéo du visage pour valider notre système de mesure de l'activité cardiaque par caméra.
