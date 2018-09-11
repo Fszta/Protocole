@@ -1,5 +1,6 @@
 # Protocole
 Test de stroop + capteur PPG + capteur gsr + caméra 
+<img src="/images/protocole.png"/>
 <br/> https://fszta.github.io/Protocole/
 <p>
   <h2>Objectifs</h2>
